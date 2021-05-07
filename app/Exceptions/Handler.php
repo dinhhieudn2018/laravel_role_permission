@@ -40,7 +40,6 @@ class Handler extends ExceptionHandler
         });
 
         $this->renderable(function (Exception $e, $request) {
-            // dd($e);
             if ($e instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
                 return response()->view('errors.exception');
             }
